@@ -1,0 +1,20 @@
+.logo {
+    height: 26px;
+    margin-right: 6px;
+}
+
+main {
+    padding: 20px 50px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.actions {
+    margin-top: 16px;
+
+    >*+* {
+        margin-left: 10px;
+    }
+}

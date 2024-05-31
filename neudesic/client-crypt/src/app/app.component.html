@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
+    <img class="logo" matButtonIcon src="/assets/neudesic.svg" alt="Neudesic logo mark" aria-hidden="true">
+    Neudesic ClientCrypt
+  </a>
+</mat-toolbar>
+
+<main>
+  <h1>Form</h1>
+  <p>Provide a message for the server below.</p>
+  <form>
+    <mat-form-field class="full-width">
+      <mat-label>Message</mat-label>
+      <textarea name="message" matInput required cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="45"
+        [(ngModel)]="message"></textarea>
+    </mat-form-field>
+    <mat-hint>Estimated Message Size: {{size | number : '1.2-2'}} KB</mat-hint>
+    <div class="actions">
+      <button mat-raised-button color="secondary" type="button" (click)="save()">Save</button>
+      <button mat-raised-button color="primary" type="button" (click)="transmit()">Transmit</button>
+    </div>
+  </form>
+</main>
